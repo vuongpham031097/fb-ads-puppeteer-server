@@ -1,6 +1,7 @@
 import express from 'express';
 import puppeteer from 'puppeteer';
 import cors from 'cors';
+import puppeteer from 'puppeteer-core';
 
 const app = express();
 app.use(cors());
@@ -11,7 +12,8 @@ app.get('/ads', async (req, res) => {
 
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    executablePath: '/usr/bin/google-chrome',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const page = await browser.newPage();
