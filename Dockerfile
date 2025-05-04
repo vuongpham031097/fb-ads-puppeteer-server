@@ -1,4 +1,4 @@
-FROM zenika/node:18-chrome
+FROM browserless/chrome:latest
 
 WORKDIR /app
 
