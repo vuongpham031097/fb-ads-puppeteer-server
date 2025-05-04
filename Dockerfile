@@ -1,4 +1,4 @@
-FROM alpeware/chrome-headless-trunk
+FROM cypress/browsers:node18.12.0-chrome107-ff107
 
 WORKDIR /app
 
