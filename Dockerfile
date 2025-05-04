@@ -1,5 +1,7 @@
 FROM browserless/chrome:latest
 
+USER root  # ← Dòng này là mấu chốt
+
 WORKDIR /app
 
 COPY package*.json ./
