@@ -1,6 +1,4 @@
-FROM browserless/chrome:latest
-
-USER root  # ← Dòng này là mấu chốt
+FROM alpeware/chrome-headless-trunk
 
 WORKDIR /app
 
@@ -10,4 +8,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
